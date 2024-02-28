@@ -15,13 +15,27 @@ function App() {
     });
   }
 
+  function deleteTodo(id) {
+    setTodos((prevTodo) => {
+      return prevTodo.filter((todo, index) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
     <div>
       <Header />
       <CreateToDo onAddTodo={addTodo} />
       {todos.map((todo, index) => {
         return (
-          <ToDo key={index} title={todo.title} description={todo.description} />
+          <ToDo
+            key={index}
+            id={index}
+            title={todo.title}
+            description={todo.description}
+            onDeleteTodo={deleteTodo}
+          />
         );
       })}
     </div>
