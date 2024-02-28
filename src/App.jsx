@@ -7,11 +7,23 @@ import CreateToDo from "./Components/CreateToDo";
 import ToDo from "./Components/ToDo";
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  function addTodo(newTodo) {
+    setTodos((prevTodo) => {
+      return [...prevTodo, newTodo];
+    });
+  }
+
   return (
     <div>
       <Header />
-      <CreateToDo />
-      <ToDo />
+      <CreateToDo onAddTodo={addTodo} />
+      {todos.map((todo, index) => {
+        return (
+          <ToDo key={index} title={todo.title} description={todo.description} />
+        );
+      })}
     </div>
   );
 }
