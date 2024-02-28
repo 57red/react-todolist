@@ -61,3 +61,38 @@ form button {
   cursor: pointer;
   outline: none;
 }
+
+.todo {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+
+.todo h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.todo p {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.todo button {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  color: #7b66ff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background-color: #fff;
+}

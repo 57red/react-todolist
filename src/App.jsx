@@ -4,12 +4,14 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./Components/Header";
 import CreateToDo from "./Components/CreateToDo";
+import ToDo from "./Components/ToDo";
 
 function App() {
   return (
     <div>
       <Header />
       <CreateToDo />
+      <ToDo />
     </div>
   );
 }
